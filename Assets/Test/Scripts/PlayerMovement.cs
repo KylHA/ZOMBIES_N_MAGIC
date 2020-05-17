@@ -23,4 +23,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject.Find("ItemDatabase").SendMessage("AddItemToCharbyName", collision.gameObject.name);
+    }
 }
