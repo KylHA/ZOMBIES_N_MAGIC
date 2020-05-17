@@ -14,10 +14,10 @@ public class BulletDestroy : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag=="Enemy")
-            collision.gameObject.GetComponent<UnitStats>().Health -= 5;
+        collision.gameObject.SendMessage("ApplyDamage", 2);
         Destroy(this.gameObject);
     }
 }

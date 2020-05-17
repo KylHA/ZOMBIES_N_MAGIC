@@ -68,6 +68,7 @@
     <Compile Include="Assets\Test\Scripts\CamFollowPlayer.cs" />
     <Compile Include="Assets\Test\Scripts\EnemyMeleeAttack.cs" />
     <Compile Include="Assets\Test\Scripts\GoPlayerPoz.cs" />
+    <Compile Include="Assets\Test\Scripts\Inventory\Item.cs" />
     <Compile Include="Assets\Test\Scripts\PlayerLookMouse.cs" />
     <Compile Include="Assets\Test\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Test\Scripts\Testgo.cs" />
