@@ -19,7 +19,7 @@ public class GoPlayerPoz : MonoBehaviour
 
     IEnumerator Goplayer(Collider other)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         pos = other.transform.position;
     }    
 }
