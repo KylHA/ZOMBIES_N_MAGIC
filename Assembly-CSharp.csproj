@@ -67,6 +67,7 @@
     <Compile Include="Assets\Test\Scripts\BulletDestroy.cs" />
     <Compile Include="Assets\Test\Scripts\CamFollowPlayer.cs" />
     <Compile Include="Assets\Test\Scripts\EnemyMeleeAttack.cs" />
+    <Compile Include="Assets\Test\Scripts\GameController.cs" />
     <Compile Include="Assets\Test\Scripts\GoPlayerPoz.cs" />
     <Compile Include="Assets\Test\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\Test\Scripts\Inventory\Item.cs" />

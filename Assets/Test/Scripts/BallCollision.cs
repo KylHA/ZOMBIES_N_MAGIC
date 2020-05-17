@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
 public class BallCollision : MonoBehaviour
-{
+{//ADD LAYER MASK
+    
+    
     private void OnCollisionEnter(Collision collision)
     {
         ExplosionDamage(this.transform.position, 5f);
@@ -15,11 +18,18 @@ public class BallCollision : MonoBehaviour
     void ExplosionDamage(Vector3 center, float radius)
     {
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
-        int i = 0;
-        while (i < hitColliders.Length)
+        
+        List<Collider> hits= hitColliders.ToList<Collider>();
+        if (hits.Contains(hits.Find(x=>x.tag=="Player")))
         {
-            hitColliders[i].SendMessage("ApplyDamage",10);
-            i++;
+            GameObject.Find("Player").SendMessage("ApplyDamage", 10);
+        }
+
+        hits.RemoveAll(x => x.tag!="Enemy" );
+
+        foreach (var item in hits)
+        {
+            item.SendMessage("ApplyDamage", 10);
         }
     }
 

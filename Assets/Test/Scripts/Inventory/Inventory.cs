@@ -14,6 +14,8 @@ public class Inventory : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.I))
+            listCharItems();
     }
     ////////////////////////////////////////////
 
