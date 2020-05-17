@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerLookMouse : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    GameObject bullet;
+    public GameObject BallPrefab;
+    GameObject bullet,ball;
     RaycastHit hit;
     float speed = 8f;
     void Update()
@@ -21,6 +22,11 @@ public class PlayerLookMouse : MonoBehaviour
         {
             bullet=Instantiate(bulletPrefab, GameObject.Find("Barrel").GetComponent<Transform>().position, GameObject.Find("Barrel").GetComponent<Transform>().rotation) as GameObject;
             bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 3100 );
+        }
+        if (Physics.Raycast(ray, out hit) && Input.GetKeyDown(KeyCode.V))
+        {
+            ball = Instantiate(BallPrefab, GameObject.Find("Barrel").GetComponent<Transform>().position, GameObject.Find("Barrel").GetComponent<Transform>().rotation) as GameObject;
+            ball.GetComponent<Rigidbody>().AddForce(transform.forward * 1100);
         }
     }
 }

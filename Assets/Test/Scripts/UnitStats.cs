@@ -14,4 +14,9 @@ public class UnitStats : MonoBehaviour
             DestroyImmediate(this.gameObject);
         }
     }
+
+    public void ApplyDamage(int damage) 
+    {
+        Health -= damage;
+    }
 }

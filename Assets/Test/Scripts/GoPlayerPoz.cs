@@ -13,7 +13,13 @@ public class GoPlayerPoz : MonoBehaviour
     {
         if (other.name == "Player") 
         {
-            pos = other.transform.position;
+            StartCoroutine(Goplayer(other));
         }
     }
+
+    IEnumerator Goplayer(Collider other)
+    {
+        yield return new WaitForSeconds(0.5f);
+        pos = other.transform.position;
+    }    
 }

@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Test\Scripts\BallCollision.cs" />
     <Compile Include="Assets\Test\Scripts\BulletDestroy.cs" />
     <Compile Include="Assets\Test\Scripts\CamFollowPlayer.cs" />
     <Compile Include="Assets\Test\Scripts\EnemyMeleeAttack.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\Test\Scripts\PlayerLookMouse.cs" />
     <Compile Include="Assets\Test\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Test\Scripts\Testgo.cs" />
+    <Compile Include="Assets\Test\Scripts\ThrowBall.cs" />
     <Compile Include="Assets\Test\Scripts\UnitStats.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/KylHA/Documents/GitHub/ZOMBIES_N_MAGIC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
