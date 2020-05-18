@@ -17,7 +17,7 @@ public class BulletDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        collision.gameObject.SendMessage("ApplyDamage", 2);
+        //collision.gameObject.SendMessage("ApplyDamage", 2);
         Destroy(this.gameObject);
     }
 }

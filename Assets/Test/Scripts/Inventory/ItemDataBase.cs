@@ -2,28 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ItemDataBase : MonoBehaviour
 {
+    public TextAsset textAsset;
+    string jsonData;
+    public GameObject Gun, Sword;
+    //Transfer to Json Later!!!!
     public List<Item> items = new List<Item>();
-    public GameObject Sword, Gun;
+    
 
     void BuildDatabase()
     {
+        jsonData = textAsset.ToString();
+        ItemList itemlist = JsonUtility.FromJson<ItemList>(jsonData);
+
         items = new List<Item>
         {
             new Item(0,"Sword","A sword",
-            new Dictionary<string, int>
-            {
-                {"Power",10},
-                {"Defence",8}
-            },Sword),
+             new Stats[] {new Stats("Power",10),new Stats("Defence",8)}
+            ),
+            
             ////////////////////////
             new Item(1,"Gun","A Gun",
-            new Dictionary<string, int>
-            {
-                {"Power",15},
-                {"Defence",6}
-            },Gun)
+            new Stats[] {new Stats("Power",15),new Stats("Defence",6)}
+            )
         };
     }
 

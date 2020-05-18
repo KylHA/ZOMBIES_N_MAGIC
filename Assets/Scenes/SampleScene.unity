@@ -209,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37837060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3333874, y: 13.1, z: -0.27667427}
+  m_LocalPosition: {x: 30.05, y: 13.1, z: -28.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -622,6 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da31537479491174bad570b4681736dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charItems: []
   itemDatabase: {fileID: 1076338465}
 --- !u!114 &1076338465
 MonoBehaviour:
@@ -635,8 +636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7b28563fddffa41bf5f5e913d0f51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sword: {fileID: 540461032}
+  textAsset: {fileID: 4900000, guid: 614c4ea0c7d05e04ebf2477a15753261, type: 3}
   Gun: {fileID: 37837060}
+  Sword: {fileID: 540461032}
+  items: []
 --- !u!4 &1076338466
 Transform:
   m_ObjectHideFlags: 0

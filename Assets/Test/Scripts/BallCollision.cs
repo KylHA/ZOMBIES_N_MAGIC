@@ -20,6 +20,7 @@ public class BallCollision : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
         
         List<Collider> hits= hitColliders.ToList<Collider>();
+
         if (hits.Contains(hits.Find(x=>x.tag=="Player")))
         {
             GameObject.Find("Player").SendMessage("ApplyDamage", 10);

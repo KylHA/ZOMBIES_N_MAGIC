@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 7392897438220059960}
   - component: {fileID: 7392897438220059963}
   - component: {fileID: 7392897438220059964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sense_Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
