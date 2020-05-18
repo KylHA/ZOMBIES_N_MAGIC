@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
     {
         Item additem = itemDatabase.GetItem(id);
         charItems.Add(additem);
-        Debug.Log("İtem Added" + additem.Name);
+        Debug.Log("Item Added" + additem.Name);
     }
 
     public void AddItemToCharbyName(string name)
@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
         if (additem != null)
         {
             charItems.Add(additem);
-            Debug.Log("İtem Added :" + additem.Name);
+            Debug.Log("Item Added :" + additem.Name);
         }
 
         else Debug.Log("No item in this Name !");

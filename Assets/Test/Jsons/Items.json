@@ -3,7 +3,7 @@
     {
       "ID": 0,
       "Name": "Sword",
-      "Description": "A Sword",
+      "Description": "A Test Sword",
       "stats": [
         {
           "name": "Attack",
@@ -18,7 +18,7 @@
     {
       "ID": 1,
       "Name": "Gun",
-      "Description": "A Gun",
+      "Description": "A Test Gun",
       "stats": [
         {
           "name": "Attack",

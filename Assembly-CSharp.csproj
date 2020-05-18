@@ -65,7 +65,6 @@
   <ItemGroup>
     <Compile Include="Assets\Test\Scripts\BallCollision.cs" />
     <Compile Include="Assets\Test\Scripts\BulletDestroy.cs" />
-    <Compile Include="Assets\Test\Scripts\CamFollowPlayer.cs" />
     <Compile Include="Assets\Test\Scripts\EnemyMeleeAttack.cs" />
     <Compile Include="Assets\Test\Scripts\GameController.cs" />
     <Compile Include="Assets\Test\Scripts\GoPlayerPoz.cs" />
@@ -73,8 +72,9 @@
     <Compile Include="Assets\Test\Scripts\Inventory\Item.cs" />
     <Compile Include="Assets\Test\Scripts\Inventory\ItemDataBase.cs" />
     <Compile Include="Assets\Test\Scripts\Inventory\JsonReader.cs" />
-    <Compile Include="Assets\Test\Scripts\PlayerLookMouse.cs" />
-    <Compile Include="Assets\Test\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Test\Scripts\Player\CamFollowPlayer.cs" />
+    <Compile Include="Assets\Test\Scripts\Player\PlayerLookMouse.cs" />
+    <Compile Include="Assets\Test\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Test\Scripts\Testgo.cs" />
     <Compile Include="Assets\Test\Scripts\UnitStats.cs" />
     <Reference Include="Unity.Timeline.Editor">

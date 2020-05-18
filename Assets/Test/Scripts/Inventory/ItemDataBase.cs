@@ -7,28 +7,22 @@ public class ItemDataBase : MonoBehaviour
 {
     public TextAsset textAsset;
     string jsonData;
-    public GameObject Gun, Sword;
-    //Transfer to Json Later!!!!
-    public List<Item> items = new List<Item>();
+
+    public List<GameObject> ItemObjList = new List<GameObject>();
     
+    public List<Item> items = new List<Item>();
 
     void BuildDatabase()
     {
         jsonData = textAsset.ToString();
         ItemList itemlist = JsonUtility.FromJson<ItemList>(jsonData);
 
-        items = new List<Item>
+        foreach (var obj in itemlist.items)
         {
-            new Item(0,"Sword","A sword",
-             new Stats[] {new Stats("Power",10),new Stats("Defence",8)}
-            ),
-            
-            ////////////////////////
-            new Item(1,"Gun","A Gun",
-            new Stats[] {new Stats("Power",15),new Stats("Defence",6)}
-            )
-        };
+            items.Add(obj);
+        }
     }
+
 
     private void Awake()
     {

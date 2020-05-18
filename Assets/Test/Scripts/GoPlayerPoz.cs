@@ -11,7 +11,7 @@ public class GoPlayerPoz : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.name == "Player") 
+        if (other.tag == "Player") 
         {
             StartCoroutine(Goplayer(other));
         }
