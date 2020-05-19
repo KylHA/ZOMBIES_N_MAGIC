@@ -22,7 +22,7 @@ public class BallCollision : MonoBehaviour
 
         if (hits.Contains(hits.Find(x=>x.tag=="Player")))
         {
-            GameObject.Find("Player").SendMessage("ApplyDamage", 10);
+            GameObject.FindGameObjectWithTag("Player").SendMessage("ApplyDamage", 10);
         }
 
         hits.RemoveAll(x => x.tag!="Enemy" );

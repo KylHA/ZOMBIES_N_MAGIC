@@ -1006,6 +1006,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3556040030649664813, guid: 989462542c91fe54aa01e89120fe1649,
         type: 3}
+    - target: {fileID: 3609754528640395178, guid: 86c4c3f426d09f747813bfa8a43d047d,
+        type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3609754528640395181, guid: 86c4c3f426d09f747813bfa8a43d047d,
         type: 3}
       propertyPath: m_Drag

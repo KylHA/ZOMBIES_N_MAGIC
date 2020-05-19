@@ -7,15 +7,10 @@ public class PlayerLookMouse : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject BallPrefab;
     GameObject bullet, ball;
-
     RaycastHit hit;
-
-
-
 
     int layerMask = 1 << 8;
     int lookmask = 1 << 9;
-
 
     private void Start()
     {
@@ -25,6 +20,7 @@ public class PlayerLookMouse : MonoBehaviour
     void Update()
     {
         RayLookat();
+
         if (Input.GetMouseButtonDown(0))
             Shoot();
 
@@ -54,11 +50,11 @@ public class PlayerLookMouse : MonoBehaviour
             hit.collider.transform.parent.SendMessage("ApplyDamage", 5);
         }
 
-       
-            
-            bullet = Instantiate(bulletPrefab, GameObject.Find("BarrelPoint").GetComponent<Transform>().position, GameObject.Find("Barrel").GetComponent<Transform>().rotation) as GameObject;
-            bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 5100);
-        
+
+
+        bullet = Instantiate(bulletPrefab, GameObject.Find("BarrelPoint").GetComponent<Transform>().position, GameObject.Find("Barrel").GetComponent<Transform>().rotation) as GameObject;
+        bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 5100);
+
 
     }
 
@@ -68,7 +64,7 @@ public class PlayerLookMouse : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            ball = Instantiate(BallPrefab, GameObject.Find("Barrel").GetComponent<Transform>().position, GameObject.Find("Barrel").GetComponent<Transform>().rotation) as GameObject;
+            ball = Instantiate(BallPrefab, GameObject.Find("BarrelPoint").GetComponent<Transform>().position, BallPrefab.transform.rotation) as GameObject;
             ball.GetComponent<Rigidbody>().AddForce(transform.forward * 1100);
         }
     }
