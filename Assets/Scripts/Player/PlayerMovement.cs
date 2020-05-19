@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject.Find("ItemDatabase").SendMessage("AddItemToCharbyName", collision.gameObject.name);
+        GameObject.Find("Inventory").SendMessage("AddItemToCharbyName", collision.gameObject.name);
         if(collision.gameObject.tag=="Item")
             Destroy(collision.gameObject);
     }

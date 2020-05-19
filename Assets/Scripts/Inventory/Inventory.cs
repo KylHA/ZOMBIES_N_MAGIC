@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
-            listCharItems();
+            equipWeapon();
     }
     ////////////////////////////////////////////
 
@@ -64,6 +64,17 @@ public class Inventory : MonoBehaviour
         foreach (Item item in charItems)
         {
             Debug.Log("Items : " + item.Name);
+        }
+    }
+
+
+    ///Late Voids
+    void equipWeapon() 
+    {
+        if(charItems.Contains(charItems.Find(x=>x.Name=="Gun")))
+        {
+            GameObject gun = Instantiate(itemDatabase.ItemObjList.Find(x => x.name == "Gun"), GameObject.Find("Holder").transform) as GameObject;
+            gun.GetComponent<Collider>().enabled = false;
         }
     }
 }

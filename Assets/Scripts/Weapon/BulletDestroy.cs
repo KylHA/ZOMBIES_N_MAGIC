@@ -5,11 +5,11 @@ using UnityEngine;
 public class BulletDestroy : MonoBehaviour
 {
     float timer=0;
-
+    
     private void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 3) 
+        if (timer >= 2) 
         {
             Destroy(this.gameObject);
         }
@@ -17,7 +17,7 @@ public class BulletDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //collision.gameObject.SendMessage("ApplyDamage", 2);
+        
         Destroy(this.gameObject);
     }
 }
