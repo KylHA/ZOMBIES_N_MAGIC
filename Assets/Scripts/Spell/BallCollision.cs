@@ -39,4 +39,3 @@ public class BallCollision : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Exp_Radius);
     }
 }
-//other.gameObject.SendMessage("ApplyDamage", 10);

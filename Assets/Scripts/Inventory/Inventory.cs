@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public static Inventory instance;
+    InventoryUI Ui;
     public List<Item> charItems = new List<Item>();
     public ItemDataBase itemDatabase;
+
+
+    void Awake()
+    {
+        instance = this;
+        Ui = GameObject.Find("InventoryUI").GetComponent<InventoryUI>();
+    }
+
 
     //////////////////////////////////////////// For Testing
     private void Start()
@@ -37,6 +47,8 @@ public class Inventory : MonoBehaviour
         }
 
         else Debug.Log("No item in this Name !");
+
+        Ui.SendMessage("UIUpdate");
     }
 
     public Item CheckItemID(int id)
@@ -67,8 +79,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-
-    ///Late Voids
+    ///Tempory test equip
     void equipWeapon() 
     {
         if(charItems.Contains(charItems.Find(x=>x.Name=="Gun")))
