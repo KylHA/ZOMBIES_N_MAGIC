@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
-    InventoryUI Ui;
+    //InventoryUI Ui; //Uncomment after ui impl...
     public List<Item> charItems = new List<Item>();
     public ItemDataBase itemDatabase;
 
@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
     void Awake()
     {
         instance = this;
-        Ui = GameObject.Find("InventoryUI").GetComponent<InventoryUI>();
+        // Ui = GameObject.Find("InventoryUI").GetComponent<InventoryUI>(); //Uncomment after ui impl...
     }
 
 
@@ -48,7 +48,7 @@ public class Inventory : MonoBehaviour
 
         else Debug.Log("No item in this Name !");
 
-        Ui.SendMessage("UIUpdate");
+        //Ui.SendMessage("UIUpdate"); //Uncomment after ui impl...
     }
 
     public Item CheckItemID(int id)
